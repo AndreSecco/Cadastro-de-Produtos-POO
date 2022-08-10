@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Compra Fácil.com</h1>
+    </header>
+
+    <main>
+        <div class="tittle">
+            <h2>Produtos</h2>
+            <span>Lista de produtos.</span>
+        </div>
+
+        <div class="card">
+            <div class="lineInput">
+                <label for="">Produto</label>
+                <input type="text" id="produto" placeholder="Descrição">
+            </div>
+            
+            <div class="lineInput">
+                <label for="">Preço</label>
+                <input type="text" id="preco" placeholder="Preço do Produto">
+            </div>
+            <button onclick="produto.salvar()">Salvar</button>
+            <button onclick="produto.cancelar()">Cancelar</button>
+        </div>
+
+        <div class="content">
+            <table border="1">
+                <thead>
+                    <th class="center">ID</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th class="center">Ações</th>
+                </thead>
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td class="center">1</td>
+                        <td >Mesa</td>
+                        <td>R$1.500,00</td>
+                        <td class="center">
+                            <img src="img/btn-editar.png" alt="">
+                            <img src="img/btn-deletar.png" alt="">
+                        </td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+
+</html>
