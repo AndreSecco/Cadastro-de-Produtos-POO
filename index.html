@@ -8,6 +8,14 @@
     <title>Orientação a Objetos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -23,9 +31,37 @@
     </header>
 
     <main>
-        <div class="tittle">
-            <h2>Produtos</h2>
-            <span>Lista de produtos.</span>
+        <div class="row cabecalho">
+            <div class="col-sm-10 col-8">
+                <div class="tittle">
+                    <h2>Produtos</h2>
+                    <span>Lista de produtos.</span>
+                </div>
+            </div>
+            <button id="sobre" type="button" data-bs-toggle="modal" data-bs-target="#sobreModal">Sobre</button>
+        </div>
+
+        <!-- Modal SOBRE -->
+        <div class="modal fade" id="sobreModal" tabindex="-1" aria-labelledby="sobreModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sobreModalLabel">Sobre este Projeto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Este projeto foi desenvolvido para aprendizado sobre a Programação Orientada a Objetos.<br><br>
+                        Então você poderá incluir produtos dentro de um Array, e este registro inserido será exibido em uma lista abaixo. <br><br>
+                        Com os botões de ações você poderá excluir qualquer registro inserido ou alterar o mesmo.<br><br>
+                        Tecnologias utilizadas (JavaScript, Bootstrap, HTML5, CSS)
+
+                        Contato: <a href="https://wa.me/5549998100407" target="_blank">Meu WhatsApp</a>                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="card">
@@ -33,13 +69,15 @@
                 <label for="">Produto</label>
                 <input type="text" id="produto" placeholder="Descrição">
             </div>
-            
+
             <div class="lineInput">
                 <label for="">Preço</label>
                 <input type="number" id="preco" placeholder="Preço do Produto">
             </div>
-            <button onclick="produto.salvar()" id="btn-salvar">Salvar</button>
-            <button onclick="produto.cancelar()">Cancelar</button>
+            <div class="row">
+                <button onclick="produto.salvar()" id="btn-salvar">Salvar</button>
+                <button onclick="produto.cancelar()" id="btn-cancelar">Cancelar</button>
+            </div>
         </div>
 
         <div class="content">
@@ -64,7 +102,10 @@
             </table>
         </div>
     </main>
-
+    <footer class="rodape">
+        <a href="https://github.com/AndreSecco/Cadastro-de-Produtos-POO" target="_blank">Clique aqui e acesse o projeto
+            no GitHub &#128521</a>
+    </footer>
 </body>
 
 </html>

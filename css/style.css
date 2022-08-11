@@ -64,7 +64,7 @@ table th{
 
 table th, td{
     text-align: left;
-    padding: 1px 5px;
+    padding: 5px 5px;
 }
 table td img{
     width: 22px;
@@ -73,4 +73,38 @@ table td img{
 
 .center{
     text-align: center;
+}
+
+.rodape{
+    bottom: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;    
+    justify-content: center;
+    display: flex;
+    
+}
+.rodape a{
+    text-decoration: none;
+}
+
+#btn-salvar{
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+#btn-cancelar{
+    width: 140px;
+}
+
+td, th{
+    border-width: 1px;
+}
+
+#sobre{
+    width: 90px;
+}
+
+.cabecalho{
+    justify-content: space-between;
 }
